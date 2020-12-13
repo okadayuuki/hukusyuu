@@ -1,0 +1,8 @@
+<h1>修正</h1>
+<%= form_for(@list, url:todolist_path) do |f| %>
+	<h1>タイトル</h1>
+	<%= f.text_field :title %>
+	<h2>本文</h2>
+	<%= f.text_area :body %>
+	<%= f.submit "修正登録" %>
+<% end %>

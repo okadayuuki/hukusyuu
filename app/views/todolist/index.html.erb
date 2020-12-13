@@ -1,0 +1,16 @@
+<div class="container">
+	<div class="row">
+		<div class="col-xs-1">
+			<% @list.each do |list| %>
+				<h1>タイトル</h1>
+				<%= list.title %>
+				<h2>本文</h2>
+				<%= list.body %>
+				<h3>修正</h3>
+				<%= link_to "修正", edit_todolist_path(list.id) %>
+			<% end %>
+			<h3>投稿</h3>
+			<%= link_to "投稿", new_todolist_path %>
+		</div>
+	</div>
+</div>
